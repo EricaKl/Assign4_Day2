@@ -75,6 +75,7 @@ namespace Assign4_Day2
                 Console.WriteLine($"Product Discount : {prodadd[i].discount_Allowed}");
                 Console.WriteLine($"Product Brand : {prodadd[i].brand}");
                 Console.WriteLine($"Product Cost : {prodadd[i].amount}");
+                Console.WriteLine();
             }
         }
 
@@ -93,6 +94,7 @@ namespace Assign4_Day2
                 Console.WriteLine($"Product Discount : {list[i].discount_Allowed}");
                 Console.WriteLine($"Product Brand : {list[i].brand}");
                 Console.WriteLine($"Product Cost : {list[i].amount}");
+                Console.WriteLine();
                 discount = list[i].discount_Allowed;
                 amount = list[i].amount;
             }

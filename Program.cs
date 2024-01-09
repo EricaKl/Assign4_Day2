@@ -2,22 +2,25 @@
 {
     class Program()
     {
+        enum role { Admin = 1 ,Customer = 2}
         static void Main()
         {
-            string role;
+            int Role;
             int size;
             string ch;
             string productName;
-            Product p = new Product();
+       
+        Product p = new Product();
+            
             do
             {
                 Console.WriteLine("...............Menu..................");
                 Console.WriteLine("1. Admin");
                 Console.WriteLine("2. Customer");
                 Console.WriteLine("Enter your Role");
-                role = Console.ReadLine();
+                Role = int.Parse(Console.ReadLine());
                
-                if (role.ToUpper() == "ADMIN")
+                if (Role == (int)role.Admin)
                 {
                     Console.WriteLine("How many Products you want to add");
                     size = int.Parse(Console.ReadLine());
@@ -30,7 +33,7 @@
 
                     p.DisplayProductDetails();
                 }
-                else if (role.ToUpper() == "CUSTOMER")
+                else if (Role == (int)role.Customer)
                 {
                     //Product p = new Product();
                     Console.WriteLine("Enter Product Name");
