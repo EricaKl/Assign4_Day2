@@ -7,7 +7,8 @@
             string role;
             int size;
             string ch;
-            string productName; 
+            string productName;
+            Product p = new Product();
             do
             {
                 Console.WriteLine("...............Menu..................");
@@ -15,13 +16,15 @@
                 Console.WriteLine("2. Customer");
                 Console.WriteLine("Enter your Role");
                 role = Console.ReadLine();
-                Console.WriteLine("How many Products you want to add");
-                size = int.Parse(Console.ReadLine());
+               
                 if (role.ToUpper() == "ADMIN")
                 {
-                    Product p = new Product();
+                    Console.WriteLine("How many Products you want to add");
+                    size = int.Parse(Console.ReadLine());
+                   
                     for (int i = 0; i < size; i++)
                     {
+                        
                         p.GetProductDetails();
                     }
 
@@ -29,17 +32,18 @@
                 }
                 else if (role.ToUpper() == "CUSTOMER")
                 {
-                    Product p = new Product();
+                    //Product p = new Product();
                     Console.WriteLine("Enter Product Name");
                     productName = Console.ReadLine();
-                    //p.DisplaySpecificProductDetails();
-
-
-
+                    p.DisplaySpecificProductDetails(productName);
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Input");
                 }
                 Console.WriteLine("Do you wish to run again y/n ");
                 ch = Console.ReadLine();
-            } while (ch == "Y||y");
+            } while (ch == "y"||ch =="Y");
           
 
         }
