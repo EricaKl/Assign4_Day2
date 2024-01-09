@@ -6,6 +6,8 @@
         {
             string role;
             int size;
+            string ch;
+            string productName; 
             do
             {
                 Console.WriteLine("...............Menu..................");
@@ -25,12 +27,19 @@
 
                     p.DisplayProductDetails();
                 }
-                //else if (role.ToUpper() == "CUSTOMER")
-                //{
+                else if (role.ToUpper() == "CUSTOMER")
+                {
+                    Product p = new Product();
+                    Console.WriteLine("Enter Product Name");
+                    productName = Console.ReadLine();
+                    //p.DisplaySpecificProductDetails();
 
 
-                //}
-            } while ()
+
+                }
+                Console.WriteLine("Do you wish to run again y/n ");
+                ch = Console.ReadLine();
+            } while (ch == "Y||y");
           
 
         }
